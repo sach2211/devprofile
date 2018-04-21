@@ -1,0 +1,130 @@
+:root {
+  --main-4box-color: aliceblue; 
+}
+
+
+body {
+  background: whitesmoke;
+  font-size: 24px;
+}
+
+.App {
+  background: white;
+  max-width: 1200px;
+  border: 2px solid black;
+  margin: auto;
+  border-radius: 2px;
+  height: 99vh;
+}
+
+
+.row1 {
+  height: 30vh;
+}
+
+.coverPic {
+  height: 30vh;
+  background: #BB6BD9;
+}
+
+.row2 {
+  height: 20vh;
+  /* background: thistle; */
+  /* border: 2px solid thistle; */
+}
+
+.profilePicContainer {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed black;
+  border-radius: 100px;
+  vertical-align: middle;
+  position: relative;
+  top: -50px;
+}
+
+.profilePic {
+  max-width: 100%;
+}
+
+.devNameAndCompany {
+  display: inline-block;
+  height: 100px;
+  min-width: 500px;
+  vertical-align: middle;
+  padding: 2px 10px 2px 10px;
+  /* background: red; */
+}
+
+.devName {
+  line-height: 50px; /* to align text to the center of the box  */
+  font-size: 36px;
+  height: 50px;
+  /* background: burlywood; */
+}
+
+.profileAndCompany {
+  line-height: 50px; /* to align text to the center of the box  */
+  height: 50px;
+  /* background: beige; */
+}
+
+.row3 {
+  height: 20vh;
+
+  /* background: seagreen; */
+}
+
+.educationDetails {
+  display: inline-block;
+  height: 20vh;
+  width: 47%;
+  /* margin: 2px; */
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 2px;
+  border: 1px solid blueviolet;
+  box-sizing: border-box; /*Include padding and border in the element's total width and height: */
+  background: var(--main-4box-color);
+}
+
+.skillDetails {
+  display: inline-block;
+  height: 20vh;
+  width: 47%;
+  /* margin: 2px; */
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 2px;
+  border: 1px solid blueviolet;
+  box-sizing: border-box; /*Include padding and border in the element's total width and height: */
+  background:  var(--main-4box-color);
+}
+
+.row4 {
+  height: 29vh;
+  /* background: lavender; */
+}
+
+.workExperience {
+  display: inline-block;
+  height: 27vh;
+  width: 47%;
+  margin: .5% 1% 0 1%;
+  padding: 2px;
+  border: 1px solid blueviolet;
+  box-sizing: border-box; /*Include padding and border in the element's total width and height: */
+  background:  var(--main-4box-color);
+}
+
+.otherWork {
+  display: inline-block;
+  height: 27vh;
+  width: 47%;
+  margin: .5% 1% 0 1%;
+  padding: 2px;
+  border: 1px solid blueviolet;
+  box-sizing: border-box; /*Include padding and border in the element's total width and height: */
+  background:  var(--main-4box-color); 
+}
