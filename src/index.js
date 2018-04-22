@@ -7,21 +7,46 @@ import registerServiceWorker from './registerServiceWorker';
 
 class AppStore {
 
-  name= 'Sachin Chopra'
+  name= 'Wondor Woman'
 
-  company= 'Myntra' 
+  company= 'Amozon' 
 
   profile= 'Senior Software Engineer'
 
-  avatar= 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Creative-Tail-People-wonder-women.svg/200px-Creative-Tail-People-wonder-women.svg.png'
+  cover= 'https://s3.amazonaws.com/choprasachin.samplebucket1/ww-poster.jpg'
 
-  education= 'Education'
+  avatar= 'https://s3.amazonaws.com/choprasachin.samplebucket1/women-avatar.png'
 
-  skills= 'Skills'
+  education= `
+  * B.S. (Hons.) in Comp Sci. from Zeus Institute of Technology, Amazon.
+  * Graduated with GPA -  5/4
+  `
 
-  experience= 'Work Experience'
+  skills= `
+  * Fullstack JS Ninja - React , Node JS.
+  * Comfortable with SQL & NoSQL DBs - Mongo and Redis.
+  * Java geek & Go expert.
+  * Love all stuff related to data - Kafka, Spark, Hadoop.
+  `
 
-  otherWork= 'Contributions'
+  experience=  `
+  * **Senior Software Engineer @  DC Universe**
+
+  Working on DC's newest gadgets along with several other teamates to defeat Thanos.
+
+
+  * **Junior Software Engineer @  Amozon National Army**
+
+  Working with senior members and my aunts to defeat demons from hell.
+
+  `
+
+  otherWork= `
+  * Regualr speaker at all the Tech Conferences.
+  * 10k + readers on Medium Blog.
+  * 1M Youtube subscribers.
+  * Top Contributor on Stack Overflow.
+  `
 }
 
 

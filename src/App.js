@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
 
         <div className='row1'>
-          <TopCover />
+          <TopCover src={this.props.store.cover} />
         </div>
         
         <div className='row2'>

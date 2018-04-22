@@ -5,7 +5,11 @@
 
 body {
   background: whitesmoke;
-  font-size: 24px;
+  font-size: 16px;
+}
+
+p {
+  margin: 2px;
 }
 
 .App {
@@ -15,6 +19,7 @@ body {
   margin: auto;
   border-radius: 2px;
   height: 99vh;
+  box-shadow: 1px 1px 2px gray;
 }
 
 
@@ -22,9 +27,18 @@ body {
   height: 30vh;
 }
 
-.coverPic {
+.coverPicContainer {
   height: 30vh;
   background: #BB6BD9;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 1px 1px gray;
+}
+
+.coverPic {
+  max-height: 30vh;
+  min-width: 1200px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .row2 {
@@ -54,6 +68,7 @@ body {
   min-width: 500px;
   vertical-align: middle;
   padding: 2px 10px 2px 10px;
+  font-size: 24px;
   /* background: red; */
 }
 
@@ -76,8 +91,16 @@ body {
   /* background: seagreen; */
 }
 
+.blockHeaders {
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-decoration: underline;
+  color: darkred;
+}
+
 .educationDetails {
   display: inline-block;
+  vertical-align: top;
   height: 20vh;
   width: 47%;
   /* margin: 2px; */
@@ -87,10 +110,12 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background: var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .skillDetails {
   display: inline-block;
+  vertical-align: top;
   height: 20vh;
   width: 47%;
   /* margin: 2px; */
@@ -100,6 +125,7 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .row4 {
@@ -109,6 +135,7 @@ body {
 
 .workExperience {
   display: inline-block;
+  vertical-align: top;
   height: 27vh;
   width: 47%;
   margin: .5% 1% 0 1%;
@@ -116,10 +143,12 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .otherWork {
   display: inline-block;
+  vertical-align: top;
   height: 27vh;
   width: 47%;
   margin: .5% 1% 0 1%;
@@ -127,4 +156,5 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color); 
+  box-shadow: 1px 1px 1px slateblue;
 }
