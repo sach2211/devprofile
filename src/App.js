@@ -39,6 +39,9 @@ class App extends Component {
           <OtherWork otherWork={this.props.store.otherWork} />
         </div>
 
+
+        {/*  Login Buttons and other stuff */}
+          <div className='loginArea g-signin2'></div>
       </div>
     );
   }

@@ -13,6 +13,7 @@ p {
 }
 
 .App {
+  position: relative;
   background: white;
   max-width: 1200px;
   border: 2px solid black;
@@ -35,8 +36,9 @@ p {
 }
 
 .coverPic {
-  max-height: 30vh;
-  min-width: 1200px;
+  height: 30vh;
+  width: 1200px;
+  max-width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -157,4 +159,11 @@ p {
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color); 
   box-shadow: 1px 1px 1px slateblue;
+}
+
+.loginArea {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
