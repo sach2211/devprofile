@@ -5,16 +5,22 @@
 
 body {
   background: whitesmoke;
-  font-size: 24px;
+  font-size: 16px;
+}
+
+p {
+  margin: 2px;
 }
 
 .App {
+  position: relative;
   background: white;
   max-width: 1200px;
   border: 2px solid black;
   margin: auto;
   border-radius: 2px;
   height: 99vh;
+  box-shadow: 1px 1px 2px gray;
 }
 
 
@@ -22,9 +28,19 @@ body {
   height: 30vh;
 }
 
-.coverPic {
+.coverPicContainer {
   height: 30vh;
   background: #BB6BD9;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 1px 1px gray;
+}
+
+.coverPic {
+  height: 30vh;
+  width: 1200px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .row2 {
@@ -54,6 +70,7 @@ body {
   min-width: 500px;
   vertical-align: middle;
   padding: 2px 10px 2px 10px;
+  font-size: 24px;
   /* background: red; */
 }
 
@@ -76,8 +93,16 @@ body {
   /* background: seagreen; */
 }
 
+.blockHeaders {
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-decoration: underline;
+  color: darkred;
+}
+
 .educationDetails {
   display: inline-block;
+  vertical-align: top;
   height: 20vh;
   width: 47%;
   /* margin: 2px; */
@@ -87,10 +112,12 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background: var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .skillDetails {
   display: inline-block;
+  vertical-align: top;
   height: 20vh;
   width: 47%;
   /* margin: 2px; */
@@ -100,6 +127,7 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .row4 {
@@ -109,6 +137,7 @@ body {
 
 .workExperience {
   display: inline-block;
+  vertical-align: top;
   height: 27vh;
   width: 47%;
   margin: .5% 1% 0 1%;
@@ -116,10 +145,12 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color);
+  box-shadow: 1px 1px 1px slateblue;
 }
 
 .otherWork {
   display: inline-block;
+  vertical-align: top;
   height: 27vh;
   width: 47%;
   margin: .5% 1% 0 1%;
@@ -127,4 +158,37 @@ body {
   border: 1px solid blueviolet;
   box-sizing: border-box; /*Include padding and border in the element's total width and height: */
   background:  var(--main-4box-color); 
+  box-shadow: 1px 1px 1px slateblue;
+}
+
+.loginArea {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.loginButton {
+  border: 1px solid black;
+  border-radius: 2px;
+  outline: none;
+  background: whitesmoke;
+  height: 36px;
+  width: 96px;
+  font-size: 16px;
+  /* margin: 2px; */
+  cursor: pointer;
+}
+.loginButton::before {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px; 
+  height: 20px;
+  content:"";
+  margin: 2px;
+  padding: 1px;
 }

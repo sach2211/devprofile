@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <script src="https://apis.google.com/js/platform.js?onload=init" defer></script>
+    <meta name="google-signin-client_id" content="651963294486-lp11jqvf2g5nnsac034tq8041k4m4oel.apps.googleusercontent.com">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -20,6 +22,26 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <script>
+        function EventBus() {
+          this.eventMap= new Map()
+    
+          this.emit= function (event) {
+            var listeners = this.eventMap.get(event);
+            listeners.map((fn) => fn());
+          }
+    
+          this.listen= function(event, callback) {
+            var listeners = this.eventMap.get(event) || [];
+            listeners.push(callback);
+            this.eventMap.set(event, listeners);
+          }
+        }
+    
+        window.eventbus = new EventBus();
+      </script>
+
   </head>
   <body>
     <noscript>
@@ -37,4 +59,57 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script defer>
+    function init() {
+      gapi.load('auth2', function() { 
+        // Ready. 
+        gapi.auth2.init();
+        resumeLogin();
+
+      });
+    }
+    // function for google login
+    function resumeLogin() {
+      var gAuth = window.gapi && window.gapi.auth2.getAuthInstance();
+      if (gAuth && gAuth.isSignedIn && gAuth.isSignedIn && gAuth.isSignedIn.Ab) {
+        // user is already signed in
+        var user = gAuth.currentUser.get();
+        var profile = user.getBasicProfile();
+        var em = profile.getEmail(); // Don't send this directly to your server!
+        var name = profile.getName();
+        window.__devkos__ = {
+          loggedIn: true,
+          email: em,
+          name: name
+        };
+        window.eventbus.emit('login-success');
+
+      } else if (!gAuth) {
+        // gAuth is not initialized yet, user might be already logged in, lets try again.
+        setTimeout(function() {resumeLogin()}, 2500);
+      } else {
+        // user is not logged in. Wait for him to sign in.
+        gAuth.isSignedIn.listen(loginStateChangeListener);
+      }
+
+      };
+
+      function loginStateChangeListener(state) {
+        if (state === true) {
+          resumeLogin();
+        }
+      }
+
+      function doGoogleLogin() {
+        var gAuth = window.gapi && window.gapi.auth2 && window.gapi.auth2.getAuthInstance();
+        gAuth.signIn();
+      }
+
+
+      // The ID token you need to pass to your backend:
+      // var id_token = googleUser.getAuthResponse().id_token;
+      // console.log("ID Token: " + id_token);
+  </script>
+
 </html>

@@ -13,12 +13,25 @@ import WorkEx from './components/WorkEx';
 import OtherWork from './components/OtherWork';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: false
+    }
+  }
+
+  componentDidMount() {
+    window.eventbus.listen('login-success', () => {
+      this.setState({ loggedIn: true });
+    })
+  }
+
   render() {
     return (
       <div className="App">
 
         <div className='row1'>
-          <TopCover />
+          <TopCover src={this.props.store.cover} />
         </div>
         
         <div className='row2'>
@@ -39,6 +52,19 @@ class App extends Component {
           <OtherWork otherWork={this.props.store.otherWork} />
         </div>
 
+
+        {/*  Login Buttons and other stuff */}
+        {
+          this.state.loggedIn
+          ? (
+            <div className='loginArea'>
+              Hello {window.__devkos__.name} !<br/>
+              Edit you profile <a href='/edit'><i> here </i></a>
+            </div>
+          ) : (
+            <button className='loginArea loginButton' onClick={() => window.doGoogleLogin()}>Login</button>  
+          )
+        }
       </div>
     );
   }
