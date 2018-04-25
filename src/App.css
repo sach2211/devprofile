@@ -167,3 +167,28 @@ p {
   top: 0;
   right: 0;
 }
+
+.loginButton {
+  border: 1px solid black;
+  border-radius: 2px;
+  outline: none;
+  background: whitesmoke;
+  height: 36px;
+  width: 96px;
+  font-size: 16px;
+  /* margin: 2px; */
+  cursor: pointer;
+}
+.loginButton::before {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px; 
+  height: 20px;
+  content:"";
+  margin: 2px;
+  padding: 1px;
+}
