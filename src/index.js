@@ -7,45 +7,50 @@ import registerServiceWorker from './registerServiceWorker';
 
 class AppStore {
 
-  name= 'Wondor Woman'
+  name= 'Sachin Chopra'
 
-  company= 'Amozon' 
+  company= 'Myntra' 
 
   profile= 'Senior Software Engineer'
 
-  cover= 'https://s3.amazonaws.com/choprasachin.samplebucket1/ww-poster.jpg'
+  cover= 'https://s3.amazonaws.com/choprasachin.samplebucket1/wall.jpg'
 
-  avatar= 'https://s3.amazonaws.com/choprasachin.samplebucket1/women-avatar.png'
+  avatar= 'https://s3.amazonaws.com/choprasachin.samplebucket1/men-avatar2.png'
 
   education= `
-  * B.S. (Hons.) in Comp Sci. from Zeus Institute of Technology, Amazon.
-  * Graduated with GPA -  5/4
+  * B.Tech (Hons.) in Comp Sci. from Indian Institute of Information Technology.
+
+
+  * Graduated with GPA -  9.1/10
   `
 
   skills= `
-  * Fullstack JS Ninja - React , Node JS.
-  * Comfortable with SQL & NoSQL DBs - Mongo and Redis.
-  * Java geek & Go expert.
-  * Love all stuff related to data - Kafka, Spark, Hadoop.
+  * Fullstack JS Ninja - React , Redux, Node JS.
+
+
+  * Familiar with SQL & NoSQL DBs - Mongo and Redis.
+
+
+  * Experinced with new browser APIs & PWAs.
+
+
+  * Love everything related to web 💖.
   `
 
   experience=  `
-  * **Senior Software Engineer @  DC Universe**
+  * **Senior Software Engineer @  myntra.com**
 
-  Working on DC's newest gadgets along with several other teamates to defeat Thanos.
+  Building Myntra's new PWA.
 
 
-  * **Junior Software Engineer @  Amozon National Army**
+  * **Software Engineer @  myntra.com**
 
-  Working with senior members and my aunts to defeat demons from hell.
+  Worked on myntra.com website -  added many new features and optimized performance.
 
   `
 
   otherWork= `
-  * Regualr speaker at all the Tech Conferences.
-  * 10k + readers on Medium Blog.
-  * 1M Youtube subscribers.
-  * Top Contributor on Stack Overflow.
+  * Spoke at ReactFoo 2018 - "Profiling and Optimizing react apps".
   `
 }
 

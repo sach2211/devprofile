@@ -52,8 +52,6 @@ p {
   display: inline-block;
   width: 180px;
   height: 180px;
-  border: 2px dashed black;
-  border-radius: 120px;
   vertical-align: middle;
   position: relative;
   top: -80px;
@@ -61,6 +59,8 @@ p {
 
 .profilePic {
   max-width: 100%;
+  border: 2px dashed black;
+  border-radius: 120px;
 }
 
 .devNameAndCompany {
