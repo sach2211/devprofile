@@ -19,24 +19,23 @@ p {
   border: 2px solid black;
   margin: auto;
   border-radius: 2px;
-  height: 99vh;
   box-shadow: 1px 1px 2px gray;
 }
 
 
 .row1 {
-  height: 30vh;
+  height: 320px;
 }
 
 .coverPicContainer {
-  height: 30vh;
+  height: 320px;
   background: #BB6BD9;
   border-bottom: 1px solid black;
   box-shadow: 0px 1px 1px gray;
 }
 
 .coverPic {
-  height: 30vh;
+  height: 320px;
   width: 1200px;
   max-width: 100%;
   object-fit: cover;
@@ -44,20 +43,20 @@ p {
 }
 
 .row2 {
-  height: 20vh;
+  height: 160px;
   /* background: thistle; */
   /* border: 2px solid thistle; */
 }
 
 .profilePicContainer {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border: 2px dashed black;
-  border-radius: 100px;
+  border-radius: 120px;
   vertical-align: middle;
   position: relative;
-  top: -50px;
+  top: -80px;
 }
 
 .profilePic {
@@ -88,9 +87,7 @@ p {
 }
 
 .row3 {
-  height: 20vh;
-
-  /* background: seagreen; */
+  display: flex;
 }
 
 .blockHeaders {
@@ -101,11 +98,8 @@ p {
 }
 
 .educationDetails {
-  display: inline-block;
-  vertical-align: top;
-  height: 20vh;
+  flex: 1;
   width: 47%;
-  /* margin: 2px; */
   margin-left: 1%;
   margin-right: 1%;
   padding: 2px;
@@ -116,11 +110,8 @@ p {
 }
 
 .skillDetails {
-  display: inline-block;
-  vertical-align: top;
-  height: 20vh;
+  flex: 1;
   width: 47%;
-  /* margin: 2px; */
   margin-left: 1%;
   margin-right: 1%;
   padding: 2px;
@@ -131,14 +122,11 @@ p {
 }
 
 .row4 {
-  height: 29vh;
-  /* background: lavender; */
+  display: flex;
 }
 
 .workExperience {
-  display: inline-block;
-  vertical-align: top;
-  height: 27vh;
+  flex: 1;
   width: 47%;
   margin: .5% 1% 0 1%;
   padding: 2px;
@@ -149,9 +137,7 @@ p {
 }
 
 .otherWork {
-  display: inline-block;
-  vertical-align: top;
-  height: 27vh;
+  flex: 1;
   width: 47%;
   margin: .5% 1% 0 1%;
   padding: 2px;
@@ -166,6 +152,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
+  display: none;  /* TODO TEMPORARILY */
 }
 
 .loginButton {
@@ -191,4 +178,117 @@ p {
   content:"";
   margin: 2px;
   padding: 1px;
+}
+
+
+@media (max-width: 800px) {
+  .App {
+    overflow-x: hidden;
+  } 
+  .row1 {
+    height: 250px;
+  }
+  .coverPicContainer {
+    height: 250px;
+  }
+  .coverPic {
+    height: 250px;
+  }
+  .profilePicContainer {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+  }
+  .row2 {
+    height: initial;
+  }
+  .devNameAndCompany {
+    height: 100px;
+    max-width: 200px;
+    min-width: 100px;
+    height: 80px;
+  }
+  .devName {
+    line-height: 24px; /* to align text to the center of the box  */
+    font-size: 24px;
+    height: initial;
+    text-overflow: ellipsis;
+    /* background: burlywood; */
+  }
+  .profileAndCompany {
+    line-height: 20px; /* to align text to the center of the box  */
+    height: 20px;
+    font-size: 18px;
+  }
+  .row3 {
+    display: block;
+  }
+
+  .educationDetails {
+    width: 90%;
+    height: initial;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .skillDetails {
+    width: 90%;
+    height: initial;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .row4 {
+    /* height: initial; */
+    display: block;
+  }
+  .workExperience {
+    width: 90%;
+    height: initial;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .otherWork {
+    width: 90%;
+    height: initial;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .loginArea {
+    display: none;
+  }
+}
+
+@media (max-width: 361px) {
+  .row1 {
+    height: 200px;
+  }
+  .coverPicContainer {
+    height: 200px;
+  }
+  .coverPic {
+    height: 200px;
+  }
+  .profilePicContainer { 
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+  } 
+  .devNameAndCompany {
+    text-align: center;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .devName {
+    font-size: 20px;
+  }
+  .profileAndCompany {
+    font-size: 18px;
+  }
 }
