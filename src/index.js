@@ -51,6 +51,7 @@ class AppStore {
 
   otherWork= `
   * Spoke at ReactFoo 2018 - "Profiling and Optimizing react apps".
+  * [JS Expert according to Pluralsight 😇](https://s3.amazonaws.com/choprasachin.samplebucket1/PluralSight-JS.png).
   `
 }
 
